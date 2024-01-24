@@ -13,4 +13,21 @@ class CarController extends Controller
         $cars = Car::latest()->get();
         return view('frontend.car', compact('cars'));
     }
+    public function bookCar($id)
+    {
+        $car = Car::find($id);
+        if ($car->status == 'ready') {
+            session()->flash('success', 'Car booked successfully');
+            $this->editCar($car);
+            return redirect('/car');
+        }
+
+        session()->flash('error', 'Car already booked');
+        return redirect('/car');
+    }
+    public function editCar($car)
+    {
+        $car->status = 'booked';
+        $car->save();
+    }
 }
