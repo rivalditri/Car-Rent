@@ -41,7 +41,7 @@
                     <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="/service" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="/car" class="nav-link">Cars</a></li>
-                    <li class="nav-item"><a href="/contanct" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="/admin/login" class="nav-link">Login</a></li>
                 </ul>
             </div>
         </div>
